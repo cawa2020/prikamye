@@ -1,0 +1,89 @@
+@import '../../styles/abstracts/variables';
+
+.how-we-work {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  gap: 40px;
+
+  .car-img {
+    position: absolute;
+    left: -15%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 50%;
+    max-width: 40%;
+  }
+
+  .points {
+    width: 900px;
+    max-width: 60%;
+  }
+
+  .point {
+    --width: 46px;
+    --margin-bottom: 48px;
+    display: flex;
+    position: relative;
+    width: 100%;
+
+    &-number {
+      margin-right: 32px;
+      background-color: $primary-color;
+      color: $white;
+      min-width: var(--width);
+      height: var(--width);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:not(:last-of-type)::after {
+      content: '';
+      z-index: -1;
+      height: calc(100% + var(--margin-bottom));
+      top: var(--width);
+      left: calc(var(--width) / 2);
+      position: absolute;
+      width: 2px;
+      background-color: $primary-color;
+    }
+  }
+
+  .point:not(:last-child) {
+    margin-bottom: var(--margin-bottom);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .how-we-work {
+    .points {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .how-we-work {
+    flex-direction: column;
+
+    .car-img {
+      display: none;
+    }
+
+    .points,
+    .left-side {
+      max-width: 100%;
+    }
+
+    .point {
+      --width: 36px;
+      --margin-bottom: 32px;
+
+      &-number {
+        margin-right: 24px;
+      }
+    }
+  }
+} 

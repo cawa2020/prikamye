@@ -1,0 +1,39 @@
+@import '../../styles/abstracts/variables';
+
+.intro {
+  width: 100%;
+  height: calc(100vh - 70px);
+  position: relative;
+  color: white;
+
+  video {
+    height: 100%;
+    width: inherit;
+    object-fit: cover;
+    filter: brightness(30%);
+  }
+
+  &-info {
+    max-width: $block-width;
+    width: calc(100% - var(--horizontal-indent) * 2);
+    position: absolute;
+    left: var(--horizontal-indent);
+    bottom: 100px;
+    z-index: 999;
+  }
+
+  &-text {
+    display: grid;
+    gap: 24px;
+    margin-bottom: 40px;
+
+    h1 {
+      text-wrap: balance;
+    }
+  }
+
+  &-buttons {
+    display: flex;
+    gap: 24px;
+  }
+} 

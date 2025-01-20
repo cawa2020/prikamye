@@ -1,0 +1,32 @@
+@import '../../styles/abstracts/variables';
+
+.about-us {
+  padding-bottom: 280px !important;
+  position: relative;
+
+  &-text {
+    max-width: $block-width;
+    display: grid;
+    gap: 24px;
+  }
+
+  .country-img {
+    position: absolute;
+    bottom: 0;
+    right: var(--horizontal-indent);
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .about-us {
+    padding-bottom: var(--vertical-indent) !important;
+    
+    .country-img {
+      position: relative;
+      width: 100%;
+      right: 0;
+      margin-top: 40px;
+    }
+  }
+} 

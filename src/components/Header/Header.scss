@@ -1,0 +1,28 @@
+@import '../../styles/abstracts/variables';
+
+header {
+  width: calc(100% - var(--horizontal-indent) * 2);
+  padding: 10px var(--horizontal-indent);
+  display: flex;
+  justify-content: space-between;
+  background-color: $white;
+  align-items: center;
+  top: 0;
+  position: sticky;
+  z-index: 999999;
+
+  .right-side {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+  }
+}
+
+nav {
+  gap: 44px;
+  display: flex;
+}
+
+.logo {
+  height: 50px;
+}

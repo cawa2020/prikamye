@@ -1,0 +1,137 @@
+@import '../abstracts/variables';
+
+// Large Desktop
+@media screen and (max-width: 1480px) {
+  .services-items-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// Tablet styles
+@media screen and (max-width: 1024px) {
+  body {
+    --vertical-indent: 60px;
+    --horizontal-indent: 20px;
+  }
+
+  header {
+    nav {
+      display: none !important;
+    }
+
+    .burger {
+      display: block;
+    }
+  }
+
+  .intro-info {
+    bottom: 60px;
+  }
+
+  .services-items-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 34px;
+    line-height: 48px;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .text-1 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .service-title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+// Mobile large styles (480-400)
+@media screen and (max-width: 580px) {
+  .services-items-container {
+    grid-template-columns: 1fr;
+  }
+
+  .call-button {
+    display: none !important;
+  }
+
+  .car-img {
+    display: none;
+  }
+
+  .how-we-work {
+    flex-direction: column;
+
+    .points,
+    .left-side {
+      max-width: 100%;
+    }
+  }
+
+  .intro-info {
+    bottom: 40px;
+  }
+
+  .intro-buttons {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 44px;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .text-1 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .service-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+// Mobile small styles (320)
+@media screen and (max-width: 320px) {
+  body {
+    --vertical-indent: 40px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  h1 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .service-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+} 

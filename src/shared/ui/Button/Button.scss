@@ -1,0 +1,77 @@
+@import '../../../styles/abstracts/variables';
+
+button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  border: none;
+  font-family: 'LTWave';
+  cursor: pointer;
+  transition: .2s;
+}
+
+.big-size {
+  font-size: $big-button-font-size;
+  line-height: $big-button-line-height;
+  padding: 14px 49.5px;
+}
+
+.normal-size {
+  font-size: $button-font-size;
+  line-height: $button-line-height;
+  padding: 11px 23px;
+}
+
+.primary-button {
+  background-color: $primary-color;
+  color: $white;
+
+  &:hover {
+    background-color: $primary-dark-color;
+  }
+}
+
+.secondary-button {
+  background-color: $primary-light-color;
+  color: $primary-color;
+
+  &:hover {
+    background-color: $white;
+  }
+}
+
+.transparent-button {
+  background-color: transparent;
+  color: $white;
+
+  &:hover {
+    background-color: $white;
+    color: $primary-black-color;
+  }
+}
+
+.gray-button {
+  background-color: $white-200;
+  color: $primary-black-color;
+
+  &:hover {
+    background-color: $white;
+  }
+}
+
+.icon-button {
+  background-color: $primary-dark-color;
+  padding: 8px;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+.call-button {
+  border: 1px solid $primary-dark-color;
+  color: $primary-dark-color;
+  background-color: transparent;
+} 

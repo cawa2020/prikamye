@@ -1,0 +1,35 @@
+:root {
+  --vertical-indent: 80px;
+  --horizontal-indent: 50px;
+  font-family: 'LTWave';
+  background-color: $white-100;
+  color: $primary-black-color;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+
+a {
+  color: $primary-black-color;
+  text-decoration: none;
+}
+
+section:not(:first-child) {
+  padding: var(--vertical-indent) var(--horizontal-indent);
+} 
