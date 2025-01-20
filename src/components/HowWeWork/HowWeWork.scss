@@ -27,15 +27,45 @@
     position: relative;
     width: 100%;
 
+    .service-title {
+      color: $gray-200;
+      transition: color 0.5s ease-out;
+    }
+
     &-number {
       margin-right: 32px;
-      background-color: $primary-color;
-      color: $white;
+      background-color: $gray;
+      color: $primary-dark-color;
       min-width: var(--width);
       height: var(--width);
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: all 0.5s ease-out;
+    }
+
+    @for $i from 1 through 8 {
+      &:nth-child(#{$i}) {
+        .service-title,
+        .point-number {
+          transition-delay: #{$i * 0.1}s;
+        }
+      }
+    }
+
+    .point-number {
+        color: $primary-black-color;
+    }
+
+    &--active {
+      .service-title {
+        color: $primary-color;
+      }
+
+      .point-number {
+        background-color: $primary-color;
+        color: $white;
+      }
     }
 
     &:not(:last-of-type)::after {
@@ -55,7 +85,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: $breakpoint-tablet) {
   .how-we-work {
     .points {
       width: 100%;
@@ -64,7 +94,7 @@
   }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: $breakpoint-mobile) {
   .how-we-work {
     flex-direction: column;
 
