@@ -22,4 +22,10 @@ $button-font-size: 16px;
 $button-line-height: 24px;
 
 // Indent
-$block-width: 720px; 
+$block-width: 720px;
+
+// Breakpoints
+$breakpoint-desktop: 1480px;
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 580px;
+$breakpoint-mobile-small: 320px; 

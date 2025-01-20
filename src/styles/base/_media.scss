@@ -1,14 +1,14 @@
 @import '../abstracts/variables';
 
 // Large Desktop
-@media screen and (max-width: 1480px) {
+@media screen and (max-width: $breakpoint-desktop) {
   .services-items-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 // Tablet styles
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: $breakpoint-tablet) {
   body {
     --vertical-indent: 60px;
     --horizontal-indent: 20px;
@@ -58,8 +58,8 @@
   }
 }
 
-// Mobile large styles (480-400)
-@media screen and (max-width: 580px) {
+// Mobile large styles
+@media screen and (max-width: $breakpoint-mobile) {
   .services-items-container {
     grid-template-columns: 1fr;
   }
@@ -110,8 +110,8 @@
   }
 }
 
-// Mobile small styles (320)
-@media screen and (max-width: 320px) {
+// Mobile small styles
+@media screen and (max-width: $breakpoint-mobile-small) {
   body {
     --vertical-indent: 40px;
   }
